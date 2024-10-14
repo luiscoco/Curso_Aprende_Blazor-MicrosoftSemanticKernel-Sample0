@@ -1,4 +1,4 @@
-# SemanticKernelSample0
+# How to start working with Azure Open AI and Microsoft Semantic Kernel
 
 For more information about the concepts implemented in the sample see this URL: 
 
