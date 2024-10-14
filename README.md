@@ -68,3 +68,49 @@ var builder = Kernel.CreateBuilder()
 Also we verify the deployed model in the Azure Portal services list
 
 ![image](https://github.com/user-attachments/assets/70048718-682d-4ffe-9b12-cce3726586c0)
+
+## 2. Create a C# console application and invoke the deployed Azure OpenAI model
+
+First we have to load the Nuget package **Microsoft.SemanticKernel**
+
+```csharp
+using Microsoft.SemanticKernel;
+```
+
+The we invoke the Azure OpenAI model:
+
+```
+builder.AddAzureOpenAIChatCompletion(
+    "your-deployment-name",
+    "your-endpoint",
+    "your-api-key",
+    "deployment-model");
+
+var kernel = builder.Build();
+```
+
+Now we invoke the AI model with an user prompt:
+
+```csharp
+var result = await kernel.InvokePromptAsync("Give me a list of breakfast foods with eggs and cheese");
+```
+
+This is the whole application source code:
+
+```csharp
+using Microsoft.SemanticKernel;
+
+var builder = Kernel.CreateBuilder();
+
+builder.AddAzureOpenAIChatCompletion(
+    "your-deployment-name",
+    "your-endpoint",
+    "your-api-key",
+    "deployment-model");
+
+var kernel = builder.Build();
+
+var result = await kernel.InvokePromptAsync("Give me a list of breakfast foods with eggs and cheese");
+
+Console.WriteLine(result);
+```
