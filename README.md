@@ -2,6 +2,8 @@
 
 For more information about the concepts implemented in the sample see this URL: 
 
+https://learn.microsoft.com/en-us/training/paths/develop-ai-agents-azure-open-ai-semantic-kernel-sdk/
+
 https://learn.microsoft.com/en-us/semantic-kernel/concepts/plugins/?pivots=programming-language-csharp
 
 ## 1. Create and Configure the Azure OpenAI service
