@@ -77,7 +77,7 @@ First we have to load the Nuget package **Microsoft.SemanticKernel**
 using Microsoft.SemanticKernel;
 ```
 
-The we invoke the Azure OpenAI model:
+Then we invoke the Azure OpenAI model:
 
 ```
 builder.AddAzureOpenAIChatCompletion(
