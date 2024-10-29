@@ -54,17 +54,6 @@ We copy the deployed model URI and Key
 
 ![image](https://github.com/user-attachments/assets/ed4e8744-8309-4f9c-8214-d1e017208a1a)
 
-We paste the model URI, Key and model ID in the middleware (Program.cs):
-
-```csharp
-string modelId = "gpt-4";
-string endpoint = "https://cocoe-m292d2lk-francecentral.openai.azure.com/";
-string apiKey = "9176d49c31da45959c50f593c60e2034";
-
-var builder = Kernel.CreateBuilder()
-            .AddAzureOpenAIChatCompletion(modelId, endpoint, apiKey);
-```
-
 Also we verify the deployed model in the Azure Portal services list
 
 ![image](https://github.com/user-attachments/assets/70048718-682d-4ffe-9b12-cce3726586c0)
